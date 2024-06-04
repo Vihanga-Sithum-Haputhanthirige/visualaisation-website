@@ -10,16 +10,24 @@
 
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="test.js"></script>
-        <style>  .area {fill: indianred}</style>
+        <style>  </style>
     </head>
     <body>
         <h1>Analyzing Life Expectancy trends in Australia</h1>
         <div>
+            <select id="options">
+                <option value="options1" id="Birth">Birth</option>
+                <option value="options2" id="Age_40">Age 40</option>
+                <option value="options3" id="Age_60">Age 60</option>
+                <option value="options4" id="Age_65">Age 65</option>
+                <option value="options5" id="Age_80">Age 80</option>
+            </select>
             <button id="female"> Female Birth Expectancy</button>
             <button id="male"> Male Birth Expectancy</button>
             <button id="both"> Compare Both </button>
             <p id="chart"></p>
-            <figcaption> Female Birth Expectancy</figcaption>
+            <figcaption id="displayData"></figcaption>
+
         </div>
     </body>
 </html>

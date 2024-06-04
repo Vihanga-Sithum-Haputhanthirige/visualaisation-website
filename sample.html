@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description"          content="Data Visualisation"/>
+        <meta name="keywords"             content="HTML,CSS,D3"/>
+        <meta name="author"               content="Sakidu Prabuddha Thurumal Wijerathnne">
+
+        <title>Assignment Web page</title>
+
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="test.js"></script>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            h1 {
+                color: #333;
+                margin-bottom: 60px;
+                margin-top: 200px;
+            }
+            #first_svg {
+                background: #fff;
+                padding: 20px;
+                padding-bottom: 50px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                max-width: 800px;
+                width: 100%;
+                text-align: center;
+            }
+            select, button {
+                margin: 10px 0;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 16px;
+            }
+            button {
+                background-color: #007BFF;
+                color: #fff;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+            button:hover {
+                background-color: #0056b3;
+                transform: scale(1.05);
+            }
+            p#chart {
+                margin-top: 20px;
+                font-size: 18px;
+                color: #555;
+            }
+            figcaption#displayData {
+                margin-top: 5px;
+                font-size: 14px;
+                color: #777;
+            }
+            #footer {
+                color:#777777;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Analyzing Life Expectancy trends in Australia</h1>
+        <div id="first_svg">
+            <select id="options">
+                <option value="options1" id="Birth">Birth</option>
+                <option value="options2" id="Age_40">Age 40</option>
+                <option value="options3" id="Age_60">Age 60</option>
+                <option value="options4" id="Age_65">Age 65</option>
+                <option value="options5" id="Age_80">Age 80</option>
+            </select>
+            <button id="female"> Female Birth Expectancy</button>
+            <button id="male"> Male Birth Expectancy</button>
+            <button id="both"> Compare Both </button>
+            <p id="chart"></p>
+            <div id="comparison_info"></div>
+            <figcaption id="displayData"></figcaption>
+        </div>
+    <footer>
+        <hr>
+        <p id="footer">&copy; 2024 Data Visualisation. All rights reserved.</p>
+    </footer>
+    </body>
+
+</html>
